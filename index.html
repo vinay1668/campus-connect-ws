@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusConnect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">CampusConnect</div>
+        <div class="nav-items">
+            <button id="loginBtn">Login</button>
+            <button id="signupBtn">Sign Up</button>
+        </div>
+    </nav>
+
+    <main>
+        <section id="auth-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form id="authForm">
+                    <h2 id="authTitle">Login</h2>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="resources">
+            <div class="resource-header">
+                <h2>Study Resources</h2>
+                <button id="addResourceBtn">+ Add Resource</button>
+            </div>
+            
+            <div class="resource-grid" id="resourceGrid">
+                <!-- Resources will be dynamically added here -->
+            </div>
+        </section>
+
+        <section id="resource-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form id="resourceForm">
+                    <h2>Add New Resource</h2>
+                    <input type="text" placeholder="Title" required>
+                    <input type="text" placeholder="Link" required>
+                    <select required>
+                        <option value="">Select Type</option>
+                        <option value="notes">Notes</option>
+                        <option value="assignment">Assignment</option>
+                        <option value="link">Useful Link</option>
+                    </select>
+                    <textarea placeholder="Description" required></textarea>
+                    <button type="submit">Share Resource</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
